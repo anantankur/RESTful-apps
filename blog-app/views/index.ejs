@@ -1,11 +1,13 @@
 <% include ./partials/header %>
+<h1>Index Page!!!</h1>
 
 <% blogs.forEach(function(el){ %>
   <div>
     <h2><%= el.title %></h2>
     <img src="<%= el.image %>">
     <span><%= el.created %></span>
-    <p><%= el.body %></p>
+    <p><%= el.body.substring(0, 100) %>...</p>
+    <a href="/blogs/<%= el._id %>">Read More</a>
   </div>
 <% }); %>
 
