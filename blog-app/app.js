@@ -5,7 +5,8 @@ var express = require('express'),
     methodOverride = require('method-override'),
     expressSanitizer = require('express-sanitizer')
 
-mongoose.connect('mongodb://localhost:27017/restful_blog_app', {useNewUrlParser: true});
+// mongoose.connect('mongodb://localhost:27017/restful_blog_app', {useNewUrlParser: true});
+mongoose.connect('mongodb://darshan:123456789gg@ds155352.mlab.com:55352/blog-app', {useNewUrlParser: true});
 app.set('view engine', 'ejs');
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(express.static('public'));
